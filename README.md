@@ -40,6 +40,7 @@ https://github.com/llogan382/lwd-dev-template/tree/VERSION
 https://github.com/llogan382/lwd-dev-template/tree/1.0.2
 
 Added support for Bootstrap
+Adds Bootstrap as the default header menu
 
 
 = 1.0.1 =
