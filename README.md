@@ -35,6 +35,12 @@ When done making edits, type:
 * Released: Month day, year
 https://github.com/llogan382/lwd-dev-template/tree/VERSION
 
+= 1.0.2 =
+* Released: Feb 13, 2019
+https://github.com/llogan382/lwd-dev-template/tree/1.0.2
+
+Added support for Bootstrap
+
 
 = 1.0.1 =
 * Released: February 13, 2019
