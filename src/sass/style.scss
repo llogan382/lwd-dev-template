@@ -114,3 +114,16 @@ h1 {
 .entry-content {
 	font-size: 15px;
 }
+
+#menu-primary {
+	display: flex;
+	flex-wrap: nowrap;
+	height: 4.5rem;
+	justify-content: space-evenly;
+}
+.nav-link {
+    text-overflow: ellipsis;
+	overflow: hidden;
+	width: 6rem;
+	height: 3.5rem;
+}
