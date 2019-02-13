@@ -1,13 +1,13 @@
 <?php
 /**
- * _s functions and definitions
+ * lwd-dev-themefunctions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package _s
  */
 
-if ( ! function_exists( '_s_setup' ) ) :
+if ( ! function_exists( 'lwd_dev_themesetup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,7 +15,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function _s_setup() {
+	function lwd_dev_themesetup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -60,7 +60,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'lwd_dev_themecustom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -81,7 +81,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', '_s_setup' );
+add_action( 'after_setup_theme', 'lwd_dev_themesetup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -90,20 +90,20 @@ add_action( 'after_setup_theme', '_s_setup' );
  *
  * @global int $content_width
  */
-function _s_content_width() {
+function lwd_dev_themecontent_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'lwd_dev_themecontent_width', 640 );
 }
-add_action( 'after_setup_theme', '_s_content_width', 0 );
+add_action( 'after_setup_theme', 'lwd_dev_themecontent_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function _s_widgets_init() {
+function lwd_dev_themewidgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', '_s' ),
 		'id'            => 'sidebar-1',
@@ -114,12 +114,12 @@ function _s_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', '_s_widgets_init' );
+add_action( 'widgets_init', 'lwd_dev_themewidgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function _s_scripts() {
+function lwd_dev_themescripts() {
 	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/src/js/navigation.js', array(), '20151215', true );
@@ -130,7 +130,7 @@ function _s_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', '_s_scripts' );
+add_action( 'wp_enqueue_scripts', 'lwd_dev_themescripts' );
 
 /**
  * Implement the Custom Header feature.

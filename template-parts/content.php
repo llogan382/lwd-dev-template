@@ -22,14 +22,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				_s_posted_on();
-				_s_posted_by();
+				lwd_dev_themeposted_on();
+				lwd_dev_themeposted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php _s_post_thumbnail(); ?>
+	<?php lwd_dev_themepost_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -54,6 +54,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php _s_entry_footer(); ?>
+		<?php lwd_dev_themeentry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -28,8 +28,8 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$_s_comment_count = get_comments_number();
-			if ( '1' === $_s_comment_count ) {
+			$lwd_dev_themecomment_count = get_comments_number();
+			if ( '1' === $lwd_dev_themecomment_count ) {
 				printf(
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', '_s' ),
@@ -38,8 +38,8 @@ if ( post_password_required() ) {
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $_s_comment_count, 'comments title', '_s' ) ),
-					number_format_i18n( $_s_comment_count ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $lwd_dev_themecomment_count, 'comments title', '_s' ) ),
+					number_format_i18n( $lwd_dev_themecomment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			}
