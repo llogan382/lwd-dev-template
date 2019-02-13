@@ -44,7 +44,7 @@ if ( ! function_exists( 'lwd_dev_themesetup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', '_s' ),
+			'primary' => __( 'Primary Menu', 'LWD Template' ),
 		) );
 
 		/*
@@ -146,6 +146,12 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Adds bootstrap Nav Walker
+ */
+
+require_once get_template_directory() . '/inc/classes/class-wp-bootstrap-navwalker.php';
 
 /**
  * Customizer additions.
