@@ -47,6 +47,7 @@ if ( ! function_exists( 'lwd_dev_themesetup' ) ) :
 			'primary' => __( 'Primary Menu', 'LWD Template' ),
 		) );
 
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
