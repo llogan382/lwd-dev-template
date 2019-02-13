@@ -36,7 +36,6 @@ When done making edits, type:
 https://github.com/llogan382/lwd-dev-template/tree/VERSION
 
 
-
 = 1.0.1 =
 * Released: February 13, 2019
 https://github.com/llogan382/lwd-dev-template/tree/1.0.1
