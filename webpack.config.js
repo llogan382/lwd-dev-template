@@ -6,10 +6,7 @@ const path = require('path'),
 
 module.exports = {
   context: __dirname,
-  entry: {
-    frontend: ['babel-polyfill', './src/index.js'],
-    customizer: './src/customizer.js'
-  },
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: '[name]-bundle.js'
@@ -20,7 +17,6 @@ module.exports = {
     rules: [
       {
         enforce: 'pre',
-        exclude: /node_modules/,
         test: /\.jsx$/,
         loader: 'eslint-loader'
       },
@@ -39,7 +35,7 @@ module.exports = {
     new BrowserSyncPlugin({
       files: '**/*.php',
       injectChanges: true,
-      proxy: 'http://loganwebdevwebpack.local'
+      proxy: 'http://loganwebdevwebpack.loc'
     })
   ],
   optimization: {
